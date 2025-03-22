@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManageActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.3"
+            android:background="@drawable/bg_manage"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/manual"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="자동관리 "
+                android:textSize="25dp"
+                android:layout_marginTop="10dp"
+                android:thumb="@drawable/switch_thumb_selector"
+                android:track="@drawable/switch_track_selector">
+
+            </androidx.appcompat.widget.SwitchCompat>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2.5"
+            android:background="@drawable/bg_manage"
+
+            android:orientation="vertical">
+
+
+
+            <androidx.gridlayout.widget.GridLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="60dp"
+                app:columnCount="3"
+                app:orientation="vertical"
+                app:rowCount="1">
+
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/bg_custom"
+                    android:text="온도\n\n 온도 이렇게 정렬? "
+                    android:textAlignment="center" />
+                <!--drawble 이미지는 png말고 jpg로 하던가 해야할듯-->
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/bg_custom"
+                    android:textAlignment="center"
+                    android:text="습도\n\n 온도 이렇게 정렬? " />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/bg_custom"
+                    android:text="조도\n\n 온도 이렇게 정렬? "
+                    android:textAlignment="center"/>
+
+       <!--         <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:background="@drawable/bg_custom"
+                    android:textAlignment="center"
+                    android:text="토양\n\n 온도 이렇게 정렬? " />
+-->
+
+            </androidx.gridlayout.widget.GridLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:id="@+id/randText"
+                    android:textColor="#000000"
+                    android:layout_gravity="center"
+                    android:textSize="20dp"
+                    android:text="좋은 환경이네요"
+                    android:textAlignment="center"
+
+                    >
+
+                </TextView>
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/austin_clap">
+
+                </ImageView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+        <!--<RelativeLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               >
+
+               <TextView
+                   android:id="@+id/textView1"
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:text="TextView1"
+                   android:background="@drawable/bg_custom">
+
+               </TextView>
+
+               <TextView
+                   android:id="@+id/textView2"
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:layout_below="@+id/textView1"
+                   android:layout_marginTop="-4dp"
+                   android:background="@drawable/bg_custom"
+                   android:text="TextView2" />
+
+               <TextView
+                   android:id="@+id/textView3"
+                   android:layout_width="100dp"
+                   android:layout_height="100dp"
+                   android:text="TextView3"
+                   android:background="@drawable/bg_custom"
+                   android:layout_toRightOf="@+id/textView1"
+                   />
+
+
+
+
+           </RelativeLayout>-->
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:layout_weight="2"
+            android:background="@drawable/bg_manage">
+            <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/fan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minWidth="150dp"
+                    android:switchPadding="20dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="50dp"
+                    android:text="환풍기"
+                    android:textSize="30dp"
+                    android:gravity="center"
+                    android:thumb="@drawable/switch_thumb_selector"
+                    android:track="@drawable/switch_track_selector" />
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/light"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:track="@drawable/switch_track_selector"
+                    android:thumb="@drawable/switch_thumb_selector"
+                    android:layout_centerHorizontal="true"
+
+                    android:layout_below="@id/fan"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:minWidth="100dp"
+                    android:switchPadding="20dp"
+                    android:textSize="30dp"
+                    android:text="생장등" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/water"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/light"
+                    android:layout_centerHorizontal="true"
+                    android:layout_gravity="center"
+
+                    android:layout_marginTop="30dp"
+                    android:minWidth="100dp"
+                    android:switchPadding="20dp"
+                    android:text="물주기"
+                    android:textSize="30dp"
+                    android:thumb="@drawable/switch_thumb_selector"
+                    android:track="@drawable/switch_track_selector" />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
